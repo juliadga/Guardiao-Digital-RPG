@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG - Segurança Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="tela-home" class="tela ativa">
+        <h1>Bem-vindo ao RPG de Segurança Digital</h1>
+        <p>Aprenda a se proteger na internet de forma interativa e dinâmica.</p> <button onclick="mostrarTela('tela-criacao-personagem')">Jogador</button> <button onclick="mostrarTela('tela-admin')">Administrador</button> </section>
+
+    <section id="tela-criacao-personagem" class="tela">
+        <h2>Crie seu Personagem</h2>
+        <p>Sua missão: Sobreviver aos perigos da internet e aprender a se proteger contra golpes.</p> <input type="text" id="nome-personagem" placeholder="Digite o nome do seu personagem"> <button onclick="mostrarTela('tela-selecao-capitulo')">Começar jogo</button> </section>
+
+    <section id="tela-selecao-capitulo" class="tela">
+        <h2>Escolha um Capítulo</h2>
+        <div id="lista-capitulos">
+            <button class="capitulo-btn" onclick="mostrarTela('tela-historia-decisao')">Capítulo 1: O E-mail Suspeito</button>
+        </div>
+    </section>
+
+    <section id="tela-historia-decisao" class="tela">
+        <h3 id="titulo-capitulo">Capítulo 1</h3>
+        <p id="texto-situacao">Você recebeu um e-mail informando que sua conta bancária foi bloqueada. O que você faz?</p> <div id="opcoes-escolha">
+            <button onclick="mostrarTela('tela-feedback-educativo')">Clicar no link do e-mail imediatamente</button>
+            <button onclick="mostrarTela('tela-feedback-educativo')">Ignorar e acessar o app oficial do banco</button>
+        </div>
+        <button onclick="mostrarTela('tela-selecao-capitulo')">Voltar</button>
+    </section>
+
+    <section id="tela-feedback-educativo" class="tela">
+        <h2>Feedback</h2>
+        <p id="texto-feedback">Você fez uma boa escolha! Clicar em links de e-mails desconhecidos pode levar a sites de phishing.</p> <button onclick="mostrarTela('tela-historia-decisao')">Continuar história</button> <button onclick="mostrarTela('tela-historia-final')">Finalizar história</button> </section>
+
+    <section id="tela-historia-final" class="tela">
+        <h2>Sua Jornada Chegou ao Fim</h2>
+        <div id="resumo-decisoes">
+            <p>Resumo: Você identificou corretamente a tentativa de phishing.</p>
+        </div>
+        <button onclick="mostrarTela('tela-perfil-progresso')">Ver Perfil e Progresso</button>
+    </section>
+
+    <section id="tela-perfil-progresso" class="tela">
+        <h2>Seu Perfil de Segurança Digital</h2>
+        <p><strong>Nome:</strong> <span id="perfil-nome">Herói Digital</span></p> <p><strong>Capítulos concluídos:</strong> 1</p> <p><strong>Histórico de escolhas:</strong> Você evitou 1 golpe de phishing.</p> <button onclick="mostrarTela('tela-home')">Voltar ao Início</button>
+    </section>
+
+    <section id="tela-admin" class="tela">
+        <h2>Painel do Administrador</h2>
+        <button>Criar capítulos</button> <button>Criar perguntas e escolhas</button> <button>Definir consequências</button> <br><br>
+        <button onclick="mostrarTela('tela-home')">Voltar à Home</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
