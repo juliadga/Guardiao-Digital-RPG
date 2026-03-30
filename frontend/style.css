@@ -1,52 +1,46 @@
-/* Novos estilos para o corpo com a imagem de fundo */
 body {
     font-family: Arial, sans-serif;
-    margin: 0; /* Remove margens padrão */
-    color: #f4f4f4; /* Mantém o texto claro */
+    margin: 0;
+    color: #f4f4f4;
     text-align: center;
 
-    /* Adicionar a imagem de fundo fornecida */
     background-image: url('Gemini_Generated_Image_9kroch9kroch9kro.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Faz a imagem rolar com a página */
+    background-attachment: fixed;
 
-    /* Centralizar o conteúdo verticalmente */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Garante que o corpo tenha pelo menos a altura da tela */
+    min-height: 100vh; 
 }
 
-/* Estilos originais da .tela, com fundo escuro para legibilidade */
 .tela {
-    display: none; /* Mantém oculto por padrão */
+    display: none; 
     max-width: 600px;
-    margin: 20px; /* Adiciona margem para afastar das bordas e mostrar mais do fundo */
-    background: rgba(43, 43, 43, 0.9); /* Fundo original escuro, ligeiramente transparente para um efeito mais sofisticado */
-    padding: 40px; /* Aumenta o padding para mais espaço */
-    border-radius: 12px; /* Aumenta o raio da borda */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Melhora a sombra */
-    backdrop-filter: blur(5px); /* Adiciona um efeito de desfoque ao fundo atrás da tela para destacar o texto */
+    margin: 20px; 
+    background: rgba(43, 43, 43, 0.9); 
+    padding: 40px; 
+    border-radius: 12px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); 
+    backdrop-filter: blur(5px); 
 }
 
-/* Exibe apenas a tela que tem a classe 'ativa' */
 .tela.ativa {
     display: block;
 }
 
-/* Estilização básica de botões e inputs */
 button {
     background-color: #4CAF50;
     color: white;
     border: none;
-    padding: 12px 24px; /* Aumenta o padding */
+    padding: 12px 24px;
     margin: 10px;
-    border-radius: 6px; /* Aumenta o raio da borda */
+    border-radius: 6px; 
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease; /* Adiciona uma transição suave */
+    transition: background-color 0.3s ease; 
 }
 
 button:hover {
@@ -54,11 +48,11 @@ button:hover {
 }
 
 input[type="text"] {
-    padding: 12px; /* Aumenta o padding */
+    padding: 12px; 
     width: 80%;
-    margin-bottom: 25px; /* Aumenta a margem inferior */
-    border-radius: 6px; /* Aumenta o raio da borda */
-    border: 1px solid #ccc; /* Adiciona uma borda sutil */
-    background-color: #fff; /* Fundo branco para contraste */
-    color: #333; /* Texto escuro para contraste */
+    margin-bottom: 25px; 
+    border-radius: 6px; 
+    border: 1px solid #ccc; 
+    background-color: #fff; 
+    color: #333; 
 }
