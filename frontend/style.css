@@ -1,21 +1,34 @@
-/* Estilos básicos de reset e layout */
+/* Novos estilos para o corpo com a imagem de fundo */
 body {
     font-family: Arial, sans-serif;
-    background-color: #1a1a1a;
-    color: #f4f4f4;
+    margin: 0; /* Remove margens padrão */
+    color: #f4f4f4; /* Mantém o texto claro */
     text-align: center;
-    padding: 20px;
+
+    /* Adicionar a imagem de fundo fornecida */
+    background-image: url('image_0.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Faz a imagem rolar com a página */
+
+    /* Centralizar o conteúdo verticalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garante que o corpo tenha pelo menos a altura da tela */
 }
 
-/* Oculta todas as telas por padrão */
+/* Estilos originais da .tela, com fundo escuro para legibilidade */
 .tela {
-    display: none;
+    display: none; /* Mantém oculto por padrão */
     max-width: 600px;
-    margin: 0 auto;
-    background: #2b2b2b;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 20px; /* Adiciona margem para afastar das bordas e mostrar mais do fundo */
+    background: rgba(43, 43, 43, 0.9); /* Fundo original escuro, ligeiramente transparente para um efeito mais sofisticado */
+    padding: 40px; /* Aumenta o padding para mais espaço */
+    border-radius: 12px; /* Aumenta o raio da borda */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Melhora a sombra */
+    backdrop-filter: blur(5px); /* Adiciona um efeito de desfoque ao fundo atrás da tela para destacar o texto */
 }
 
 /* Exibe apenas a tela que tem a classe 'ativa' */
@@ -28,11 +41,12 @@ button {
     background-color: #4CAF50;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 24px; /* Aumenta o padding */
     margin: 10px;
-    border-radius: 5px;
+    border-radius: 6px; /* Aumenta o raio da borda */
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave */
 }
 
 button:hover {
@@ -40,9 +54,11 @@ button:hover {
 }
 
 input[type="text"] {
-    padding: 10px;
+    padding: 12px; /* Aumenta o padding */
     width: 80%;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: none;
+    margin-bottom: 25px; /* Aumenta a margem inferior */
+    border-radius: 6px; /* Aumenta o raio da borda */
+    border: 1px solid #ccc; /* Adiciona uma borda sutil */
+    background-color: #fff; /* Fundo branco para contraste */
+    color: #333; /* Texto escuro para contraste */
 }
