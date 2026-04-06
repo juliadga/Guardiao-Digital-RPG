@@ -1,11 +1,11 @@
 # Guardiao-Digital-RPG
+Equipe 10
 
 Dinâmica do RPG: 
 1. O jogador começa um capítulo. 
 2. Surge uma situação e mostra opções.
 3. O sistema mostra a consequência, explica o risco e guarda a escolha.
-4. No final do capítulo gera uma história personalizada baseada nas escolhas.
-5. No final do jogo mostra o “Perfil de Segurança Digital” do jogador.
+4. No final do jogo mostra a história personalizada baseada nas escolhas e o “Perfil de Segurança Digital” do jogador.
 
 Tema: Site de jogo RPG dinâmico e intuitivo que ensina como se proteger contra ciberataques, golpes online e invasões (hackers).
 Objetivo: Educar e conscientizar pessoas sobre segurança digital, utilizando uma abordagem interativa e didática.
@@ -18,7 +18,7 @@ Documentação do projeto
 05/03 – 13/03 / até 14/03
 
 Desenvolvimento do frontend
-16/03 – 03/04 /
+16/03 – 03/04 / até 02/04
 
 Desenvolvimento do backend e banco de dados
 06/04 – 08/05 /
