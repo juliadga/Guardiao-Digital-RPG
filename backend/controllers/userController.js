@@ -5,9 +5,9 @@ const getUsers = (req, res) => {
 };
 
 const createUser = (req, res) => {
-  const { name, email } = req.body;
-  if (!name || !email) {
-    return res.status(400).json({ error: 'Nome e email são obrigatórios' });
+  const { name } = req.body;
+  if (!name ) {
+    return res.status(400).json({ error: 'Nome é obrigatório' });
   }
   const newUser = { id: users.length + 1, name, email };
   users.push(newUser);
