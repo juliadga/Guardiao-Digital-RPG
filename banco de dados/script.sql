@@ -62,3 +62,35 @@ CREATE TABLE logs_atividades (
     data_atividade TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE
 );
+
+INSERT INTO capitulos (titulo, situacao_narrativa) VALUES
+('Capítulo 1: O E-mail Suspeito', 'Você recebeu um e-mail informando que sua conta bancária foi bloqueada. O que você faz?'),
+('Capítulo 2: Wi-Fi Grátis', 'Você está em um café e precisa acessar sua conta bancária. O que você faz?'),
+('Capítulo 3: Amigo no PIX', 'Um amigo pede dinheiro via PIX, mas parece estranho. O que você faz?'),
+('Capítulo 4: Senha Segura', 'Você precisa criar uma senha. O que você faz?'),
+('Capítulo 5: Bilhete Premiado', 'Você ganhou um prêmio. O que você faz ao postar?'),
+('Capítulo 6: Segurança das Contas', 'Você está configurando segurança. O que você faz?');
+
+INSERT INTO opcoes (capitulo_id, texto_escolha, feedback_educativo, e_seguro) VALUES
+(1, 'Clicar no link do e-mail imediatamente', 'Isso pode ser phishing!', false),
+(1, 'Acessar o app oficial do banco', 'Boa escolha! Evita golpes.', true);
+
+INSERT INTO opcoes (capitulo_id, texto_escolha, feedback_educativo, e_seguro) VALUES
+(2, 'Usar Wi-Fi aberto', 'Perigoso! Pode ser interceptado.', false),
+(2, 'Usar dados móveis', 'Conexão mais segura!', true);
+
+INSERT INTO opcoes (capitulo_id, texto_escolha, feedback_educativo, e_seguro) VALUES
+(3, 'Enviar dinheiro', 'Pode ser golpe!', false),
+(3, 'Confirmar com ligação', 'Boa prática de segurança!', true);
+
+INSERT INTO opcoes (capitulo_id, texto_escolha, feedback_educativo, e_seguro) VALUES
+(4, 'Senha 123456', 'Senha fraca!', false),
+(4, 'Senha com símbolos', 'Senha forte!', true);
+
+INSERT INTO opcoes (capitulo_id, texto_escolha, feedback_educativo, e_seguro) VALUES
+(5, 'Postar QR Code', 'Risco de fraude!', false),
+(5, 'Esconder dados', 'Protege sua informação!', true);
+
+INSERT INTO opcoes (capitulo_id, texto_escolha, feedback_educativo, e_seguro) VALUES
+(6, 'Desativar 2FA', 'Muito inseguro!', false),
+(6, 'Ativar 2FA', 'Excelente proteção!', true);
