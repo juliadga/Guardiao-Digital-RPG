@@ -82,20 +82,45 @@ INSERT INTO opcoes (capitulo_id, texto_escolha, feedback_educativo, e_seguro) VA
 
 INSERT INTO opcoes (capitulo_id, texto_escolha, feedback_educativo, e_seguro) VALUES
 (2, 'Usar Wi-Fi aberto', 'Perigoso! Pode ser interceptado.', false),
+(2, 'Fazer login no banco usando a rede aberta', 'Perigoso! Pode ser interceptado.', false),
 (2, 'Usar dados móveis', 'Conexão mais segura!', true);
 
 INSERT INTO opcoes (capitulo_id, texto_escolha, feedback_educativo, e_seguro) VALUES
 (3, 'Enviar dinheiro', 'Pode ser golpe!', false),
+(3, 'Responder a mensagem perguntando se é realmente ele', 'Pode ser golpe!', false),
 (3, 'Confirmar com ligação', 'Boa prática de segurança!', true);
 
 INSERT INTO opcoes (capitulo_id, texto_escolha, feedback_educativo, e_seguro) VALUES
 (4, 'Senha 123456', 'Senha fraca!', false),
+(4, 'Criar uma senha “forte”, mas igual à que já usa em outro site', 'Senha repetitiva!', false),
 (4, 'Senha com símbolos', 'Senha forte!', true);
 
 INSERT INTO opcoes (capitulo_id, texto_escolha, feedback_educativo, e_seguro) VALUES
 (5, 'Postar QR Code', 'Risco de fraude!', false),
+(5, 'Postar a foto cortando “só um pouco” dos dados', 'Risco de fraude!', false),
 (5, 'Esconder dados', 'Protege sua informação!', true);
 
 INSERT INTO opcoes (capitulo_id, texto_escolha, feedback_educativo, e_seguro) VALUES
 (6, 'Desativar 2FA', 'Muito inseguro!', false),
+(6, 'Ativar o 2FA só nas contas “mais importantes”', 'Muito inseguro!', false),
 (6, 'Ativar 2FA', 'Excelente proteção!', true);
+
+INSERT INTO opcoes (capitulo_id, texto_escolha, feedback_educativo, e_seguro) VALUES
+(7, 'Enviar o código imediatamente', 'acesso à sua conta para outra pessoa!', false),
+(7, 'Perguntar mais detalhes e, se parecer convincente', 'acesso à sua conta para outra pessoa!', false),
+(7, 'Não enviar o código em hipótese nenhuma', 'nunca devem ser compartilhados!', true);
+
+INSERT INTO opcoes (capitulo_id, texto_escolha, feedback_educativo, e_seguro) VALUES
+(8, 'Comprar imediatamente', 'costumam ser armadilhas!', false),
+(8, 'comprar se ele parecer “profissional”', 'costumam ser armadilhas!', false),
+(8, 'desconfiar de ofertas boas demais', 'Descontos exagerados são golpes!', true);
+
+INSERT INTO opcoes (capitulo_id, texto_escolha, feedback_educativo, e_seguro) VALUES
+(9, 'Baixar e instalar', 'fora de lojas oficiais podem conter vírus!', false),
+(9, 'Instalar porque parece confiável', 'fora de lojas oficiais podem conter vírus!', false),
+(9, 'Verificar na loja oficial', 'Baixar apps só de lojas oficiais!', true);
+
+INSERT INTO opcoes (capitulo_id, texto_escolha, feedback_educativo, e_seguro) VALUES
+(10, 'Escanear o QR Code', 'QR Code pode esconder golpes!', false),
+(10, 'Escanear o código, mas sem inserir dados', 'QR Code pode esconder golpes!', false),
+(10, 'Evitar escanear QR Codes desconhecidos', 'podem levar a sites maliciosos!', true);
