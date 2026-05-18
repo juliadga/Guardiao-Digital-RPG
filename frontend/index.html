@@ -30,6 +30,10 @@
             <button class="capitulo-btn" onclick="mostrarTela('tela-historia-decisao-4')">Capítulo 4: A Senha do Personagem</button>
             <button class="capitulo-btn" onclick="mostrarTela('tela-historia-decisao-5')">Capítulo 5: O Bilhete Premiado</button>
             <button class="capitulo-btn" onclick="mostrarTela('tela-historia-decisao-6')">Capítulo 6: O Segundo Selo</button>
+            <button class="capitulo-btn" onclick="mostrarTela('tela-historia-decisao-6')">Capítulo 7: O Código de Verificação</button>
+            <button class="capitulo-btn" onclick="mostrarTela('tela-historia-decisao-6')">Capítulo 8: A Promoção Imperdível</button>
+            <button class="capitulo-btn" onclick="mostrarTela('tela-historia-decisao-6')">Capítulo 9: O Aplicativo Desconhecido</button>
+            <button class="capitulo-btn" onclick="mostrarTela('tela-historia-decisao-6')">Capítulo 10: O QR Code Misterioso</button>
         </div>
     </section>
 
@@ -39,6 +43,7 @@
         <div id="opcoes-escolha">
             <button onclick="atualizarProgresso(1, false); mostrarTela('tela-feedback-negativo-1')">Clicar no link do e-mail imediatamente</button>
             <button onclick="atualizarProgresso(1, true); mostrarTela('tela-feedback-educativo-1')">Ignorar e acessar o app oficial do banco</button>
+            <button onclick="atualizarProgresso(1, false); mostrarTela('tela-feedback-negativo-1')">Abrir o link só para “ver se é verdadeiro”, sem inserir dados</button>
         </div>
         <button onclick="mostrarTela('tela-selecao-capitulo')">Voltar</button>
     </section>
@@ -47,13 +52,12 @@
         <h2>Feedback</h2>
         <p>Você fez uma boa escolha! Clicar em links de e-mails desconhecidos pode levar a sites de phishing.</p>
         <button onclick="mostrarTela('tela-historia-decisao-2')">Continuar história</button>
-        <button onclick="mostrarTela('tela-historia-final')">Finalizar história</button>
     </section>
 
     <section id="tela-feedback-negativo-1" class="tela">
         <h2>Feedback</h2>
         <p>Essa não foi uma boa escolha! Clicar em links de e-mails desconhecidos pode levar a sites de phishing, onde suas informações podem ser roubadas.</p>
-        <button onclick="mostrarTela('tela-historia-decisao-1')">Tentar novamente</button>
+        <button onclick="mostrarTela('tela-historia-decisao-2')">Continuar história</button>
     </section>
 
     <section id="tela-historia-decisao-2" class="tela">
@@ -61,6 +65,7 @@
         <p id="texto-situacao">Você está em um café e precisa acessar sua conta bancária. O que você faz?</p>
         <div id="opcoes-escolha">
             <button onclick="atualizarProgresso(2, false); mostrarTela('tela-feedback-negativo-2')">Fazer login no banco usando a rede aberta</button>
+            <button onclick="atualizarProgresso(2, false); mostrarTela('tela-feedback-negativo-2')">Usar o Wi-Fi do café só “rapidinho”, evitando acessar dados importantes</button>
             <button onclick="atualizarProgresso(2, true); mostrarTela('tela-feedback-educativo-2')">Usar os dados móveis (4G/5G)</button>
         </div>
         <button onclick="mostrarTela('tela-selecao-capitulo')">Voltar</button>
@@ -70,19 +75,19 @@
         <h2>Feedback</h2>
         <p>Você fez uma boa escolha! Usar dados móveis garante uma conexão segura e privada.</p>
         <button onclick="mostrarTela('tela-historia-decisao-3')">Continuar história</button>
-        <button onclick="mostrarTela('tela-historia-final')">Finalizar história</button>
     </section>
     
     <section id="tela-feedback-negativo-2" class="tela">
         <h2>Feedback</h2>
         <p>Essa não foi uma boa escolha! Redes Wi-Fi abertas podem ser interceptadas por hackers.</p>
-        <button onclick="mostrarTela('tela-historia-decisao-2')">Tentar novamente</button>
+        <button onclick="mostrarTela('tela-historia-decisao-3')">Continuar história</button>
     </section>
 
     <section id="tela-historia-decisao-3" class="tela">
         <h3 id="titulo-capitulo">Capítulo 3</h3>
         <p id="texto-situacao">Um amigo te pede dinheiro via PIX, mas algo parece estranho. O que você faz?</p>
         <div id="opcoes-escolha">
+            <button onclick="atualizarProgresso(3, false); mostrarTela('tela-feedback-negativo-3')">Responder a mensagem perguntando se é realmente ele</button>
             <button onclick="atualizarProgresso(3, false); mostrarTela('tela-feedback-negativo-3')">Enviar dinheiro ou dados via PIX</button>
             <button onclick="atualizarProgresso(3, true); mostrarTela('tela-feedback-educativo-3')">Ligar para a pessoa para confirmar</button>
         </div>
@@ -93,13 +98,12 @@
         <h2>Feedback</h2>
         <p>Você fez uma boa escolha! Confirmar diretamente evita cair em golpes de perfis clonados.</p>
         <button onclick="mostrarTela('tela-historia-decisao-4')">Continuar história</button>
-        <button onclick="mostrarTela('tela-historia-final')">Finalizar história</button>
     </section>
     
     <section id="tela-feedback-negativo-3" class="tela">
         <h2>Feedback</h2>
         <p>Essa não foi uma boa escolha! Perfis clonados são usados para aplicar golpes financeiros.</p>
-        <button onclick="mostrarTela('tela-historia-decisao-3')">Tentar novamente</button>
+        <button onclick="mostrarTela('tela-historia-decisao-4')">Continuar história</button>
     </section>
 
     <section id="tela-historia-decisao-4" class="tela">
@@ -107,6 +111,7 @@
         <p id="texto-situacao">Você precisa criar uma senha para seu personagem. O que você faz?</p>
         <div id="opcoes-escolha">
             <button onclick="atualizarProgresso(4, false); mostrarTela('tela-feedback-negativo-4')">Usar "123456" ou o nome</button>
+            <button onclick="atualizarProgresso(4, false); mostrarTela('tela-feedback-negativo-4')">Criar uma senha “forte”, mas igual à que já usa em outro site</button>
             <button onclick="atualizarProgresso(4, true); mostrarTela('tela-feedback-educativo-4')">Criar uma senha com símbolos</button>
         </div>
         <button onclick="mostrarTela('tela-selecao-capitulo')">Voltar</button>
@@ -116,19 +121,19 @@
         <h2>Feedback</h2>
         <p>Você fez uma boa escolha! Senhas complexas são mais seguras contra ataques.</p>
         <button onclick="mostrarTela('tela-historia-decisao-5')">Continuar história</button>
-        <button onclick="mostrarTela('tela-historia-final')">Finalizar história</button>
     </section>
     
     <section id="tela-feedback-negativo-4" class="tela">
         <h2>Feedback</h2>
         <p>Essa não foi uma boa escolha! Senhas simples são facilmente descobertas por hackers.</p>
-        <button onclick="mostrarTela('tela-historia-decisao-4')">Tentar novamente</button>
+        <button onclick="mostrarTela('tela-historia-decisao-5')">Continuar história</button>
     </section>
 
     <section id="tela-historia-decisao-5" class="tela">
         <h3 id="titulo-capitulo">Capítulo 5</h3>
         <p id="texto-situacao">Você ganhou um prêmio e quer postar nas redes sociais. O que você faz?</p>
         <div id="opcoes-escolha">
+            <button onclick="atualizarProgresso(5, false); mostrarTela('tela-feedback-negativo-5')">Postar a foto cortando “só um pouco” dos dados</button>
             <button onclick="atualizarProgresso(5, false); mostrarTela('tela-feedback-negativo-5')">Postar foto do bilhete/QR Code</button>
             <button onclick="atualizarProgresso(5, true); mostrarTela('tela-feedback-educativo-5')">Esconder dados sensíveis na foto</button>
         </div>
@@ -139,13 +144,12 @@
         <h2>Feedback</h2>
         <p>Você fez uma boa escolha! Proteger informações privadas evita fraudes.</p>
         <button onclick="mostrarTela('tela-historia-decisao-6')">Continuar história</button>
-        <button onclick="mostrarTela('tela-historia-final')">Finalizar história</button>
     </section>
     
     <section id="tela-feedback-negativo-5" class="tela">
         <h2>Feedback</h2>
         <p>Essa não foi uma boa escolha! Expor dados pessoais pode levar a fraudes.</p>
-        <button onclick="mostrarTela('tela-historia-decisao-5')">Tentar novamente</button>
+        <button onclick="mostrarTela('tela-historia-decisao-6')">Continuar história</button>
     </section>
 
     <section id="tela-historia-decisao-6" class="tela">
@@ -154,6 +158,7 @@
         <div id="opcoes-escolha">
             <button onclick="atualizarProgresso(6, false); mostrarTela('tela-feedback-negativo-6')">Desativar a verificação em duas etapas</button>
             <button onclick="atualizarProgresso(6, true); mostrarTela('tela-feedback-educativo-6')">Ativar o 2FA em todas as contas</button>
+            <button onclick="atualizarProgresso(6, false); mostrarTela('tela-feedback-negativo-6')">Ativar o 2FA só nas contas “mais importantes”</button>
         </div>
         <button onclick="mostrarTela('tela-selecao-capitulo')">Voltar</button>
     </section>
@@ -161,20 +166,109 @@
     <section id="tela-feedback-educativo-6" class="tela">
         <h2>Feedback</h2>
         <p>Você fez uma boa escolha! O 2FA adiciona uma camada extra de segurança.</p>
-        <button onclick="mostrarTela('tela-historia-final')">Finalizar história</button>
+        <button onclick="mostrarTela('tela-historia-decisao-7')">Continuar história</button>
     </section>
     
     <section id="tela-feedback-negativo-6" class="tela">
         <h2>Feedback</h2>
         <p>Essa não foi uma boa escolha! Sem 2FA, suas contas ficam mais vulneráveis.</p>
-        <button onclick="mostrarTela('tela-historia-decisao-6')">Tentar novamente</button>
+        <button onclick="mostrarTela('tela-historia-decisao-7')">Continuar história</button>
+    </section>
+
+    <section id="tela-historia-decisao-7" class="tela">
+        <h3 id="titulo-capitulo">Capítulo 7</h3>
+        <p id="texto-situacao">Você recebe um SMS com um código de verificação que você não solicitou e alguém te liga dizendo que precisa do código. O que você faz?</p>
+        <div id="opcoes-escolha">
+            <button onclick="atualizarProgresso(7, false); mostrarTela('tela-feedback-negativo-7')">Enviar o código imediatamente para ajudar a pessoa</button>
+            <button onclick="atualizarProgresso(7, true); mostrarTela('tela-feedback-educativo-7')">Não enviar o código em hipótese nenhuma e ignorar o pedido</button>
+            <button onclick="atualizarProgresso(7, false); mostrarTela('tela-feedback-negativo-7')">Perguntar mais detalhes e, se parecer convincente, enviar o código</button>
+        </div>
+        <button onclick="mostrarTela('tela-selecao-capitulo')">Voltar</button>
+    </section>
+    
+    <section id="tela-feedback-educativo-7" class="tela">
+        <h2>Feedback</h2>
+        <p>Boa! Códigos de verificação são pessoais — nunca devem ser compartilhados.</p>
+	<button onclick="mostrarTela('tela-historia-decisao-8')">Continuar história</button>
+    </section>
+    
+    <section id="tela-feedback-negativo-7" class="tela">
+        <h2>Feedback</h2>
+        <p>Atenção! Compartilhar esse código pode dar acesso à sua conta para outra pessoa.</p>
+        <button onclick="mostrarTela('tela-historia-decisao-8')">Continuar história</button>
+    </section>
+
+    <section id="tela-historia-decisao-8" class="tela">
+        <h3 id="titulo-capitulo">Capítulo 8</h3>
+        <p id="texto-situacao">Você vê um anúncio nas redes sociais oferecendo um produto caro com um desconto absurdo, por tempo limitado. O que você faz?</p>
+        <div id="opcoes-escolha">
+            <button onclick="atualizarProgresso(8, false); mostrarTela('tela-feedback-negativo-8')">Comprar imediatamente sem verificar nada</button>
+            <button onclick="atualizarProgresso(8, true); mostrarTela('tela-feedback-educativo-8')">Pesquisar a reputação da loja e desconfiar de ofertas boas demais</button>
+            <button onclick="atualizarProgresso(8, false); mostrarTela('tela-feedback-negativo-8')">Entrar no site e comprar se ele parecer “profissional”</button>
+        </div>
+        <button onclick="mostrarTela('tela-selecao-capitulo')">Voltar</button>
+    </section>
+    
+    <section id="tela-feedback-educativo-8" class="tela">
+        <h2>Feedback</h2>
+        <p>Excelente! Descontos exagerados são um dos golpes mais comuns na internet.</p>
+	<button onclick="mostrarTela('tela-historia-decisao-9')">Continuar história</button>
+    </section>
+    
+    <section id="tela-feedback-negativo-8" class="tela">
+        <h2>Feedback</h2>
+        <p>Cuidado! Ofertas “boas demais” costumam ser armadilhas para enganar usuários.</p>
+        <button onclick="mostrarTela('tela-historia-decisao-9')">Continuar história</button>
+    </section>
+
+    <section id="tela-historia-decisao-9" class="tela">
+        <h3 id="titulo-capitulo">Capítulo 9</h3>
+        <p id="texto-situacao">Um site pede para você instalar um aplicativo para continuar usando um serviço. O que você faz?</p>
+        <div id="opcoes-escolha">
+            <button onclick="atualizarProgresso(9, false); mostrarTela('tela-feedback-negativo-9')">Baixar e instalar imediatamente</button>
+            <button onclick="atualizarProgresso(9, true); mostrarTela('tela-feedback-educativo-9')">Verificar na loja oficial e evitar downloads externos</button>
+            <button onclick="atualizarProgresso(9, false); mostrarTela('tela-feedback-negativo-9')">Instalar só porque o site parece confiável</button>
+        </div>
+        <button onclick="mostrarTela('tela-selecao-capitulo')">Voltar</button>
+    </section>
+    
+    <section id="tela-feedback-educativo-9" class="tela">
+        <h2>Feedback</h2>
+        <p>Perfeito! Baixar apps só de lojas oficiais evita muitos riscos.</p>
+	<button onclick="mostrarTela('tela-historia-decisao-10')">Continuar história</button>
+    </section>
+    
+    <section id="tela-feedback-negativo-9" class="tela">
+        <h2>Feedback</h2>
+        <p>Isso é perigoso! Apps fora de lojas oficiais podem conter vírus ou roubar dados.</p>
+        <button onclick="mostrarTela('tela-historia-decisao-10')">Continuar história</button>
+    </section>
+
+    <section id="tela-historia-decisao-10" class="tela">
+        <h3 id="titulo-capitulo">Capítulo 10</h3>
+        <p id="texto-situacao">Você encontra um QR Code colado em um poste oferecendo acesso rápido a um benefício gratuitamente. O que você faz?</p>
+        <div id="opcoes-escolha">
+            <button onclick="atualizarProgresso(10, false); mostrarTela('tela-feedback-negativo-10')">Escanear o QR Code imediatamente para ver o que acontece</button>
+            <button onclick="atualizarProgresso(10, true); mostrarTela('tela-feedback-educativo-10')">Evitar escanear QR Codes desconhecidos e buscar informações por fontes oficiais</button>
+            <button onclick="atualizarProgresso(10, false); mostrarTela('tela-feedback-negativo-10')">Escanear o código, mas sem inserir dados pessoais</button>
+        </div>
+        <button onclick="mostrarTela('tela-selecao-capitulo')">Voltar</button>
+    </section>
+    
+    <section id="tela-feedback-educativo-10" class="tela">
+        <h2>Feedback</h2>
+        <p>Muito bem! QR Codes desconhecidos podem levar a sites maliciosos.</p>
+	<button onclick="mostrarTela('tela-historia-final')">Finalizar história</button>
+    </section>
+    
+    <section id="tela-feedback-negativo-10" class="tela">
+        <h2>Feedback</h2>
+        <p>Fique atento! Um simples QR Code pode esconder golpes ou links perigosos.</p>
+        <button onclick="mostrarTela('tela-historia-final')">Finalizar história</button>
     </section>
 
     <section id="tela-historia-final" class="tela">
         <h2>Sua Jornada Chegou ao Fim</h2>
-        <div id="resumo-decisoes">
-            <p>Resumo: Você identificou corretamente a tentativa de phishing.</p>
-        </div>
         <button onclick="mostrarTela('tela-perfil-progresso')">Ver Perfil e Progresso</button>
     </section>
 

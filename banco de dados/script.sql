@@ -69,10 +69,15 @@ INSERT INTO capitulos (titulo, situacao_narrativa) VALUES
 ('Capítulo 3: Amigo no PIX', 'Um amigo pede dinheiro via PIX, mas parece estranho. O que você faz?'),
 ('Capítulo 4: Senha Segura', 'Você precisa criar uma senha. O que você faz?'),
 ('Capítulo 5: Bilhete Premiado', 'Você ganhou um prêmio. O que você faz ao postar?'),
-('Capítulo 6: Segurança das Contas', 'Você está configurando segurança. O que você faz?');
+('Capítulo 6: Segurança das Contas', 'Você está configurando segurança. O que você faz?'),
+('Capítulo 7: O Código de Verificação', 'Você recebe um SMS com um código de verificação que você não solicitou e alguém te liga dizendo que precisa do código. O que você faz?'),
+('Capítulo 8: A Promoção Imperdível', 'Você vê um anúncio nas redes sociais oferecendo um produto caro com um desconto absurdo, por tempo limitado. O que você faz?'),
+('Capítulo 9: O Aplicativo Desconhecido', 'Um site pede para você instalar um aplicativo para continuar usando um serviço. O que você faz?'),
+('Capítulo 10: O QR Code Misterioso', 'Você encontra um QR Code colado em um poste oferecendo acesso rápido a um benefício gratuitamente. O que você faz?');
 
 INSERT INTO opcoes (capitulo_id, texto_escolha, feedback_educativo, e_seguro) VALUES
 (1, 'Clicar no link do e-mail imediatamente', 'Isso pode ser phishing!', false),
+(1, 'Abrir o link só para “ver se é verdadeiro”, sem inserir dados', 'Isso pode ser phishing!', false),
 (1, 'Acessar o app oficial do banco', 'Boa escolha! Evita golpes.', true);
 
 INSERT INTO opcoes (capitulo_id, texto_escolha, feedback_educativo, e_seguro) VALUES
