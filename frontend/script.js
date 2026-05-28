@@ -29,7 +29,47 @@ let jogador = {
     escolhas: []
 };
 
-function iniciarJogo() {
+async function carregarProgressoDoBanco(nomeJogador) {
+    try {
+        const response = await fetch(`http://localhost:3000/api/progresso?nome=${nomeJogador}`);
+        if (!response.ok) {
+            throw new Error('Erro ao carregar progresso do banco');
+        }
+
+        const dados = await response.json();
+        jogador.nome = dados.nome;
+        jogador.capitulosConcluidos = dados.capitulosConcluidos;
+        jogador.escolhas = dados.escolhas;
+
+        console.log('Progresso carregado com sucesso:', jogador);
+    } catch (error) {
+        console.error('Erro ao carregar progresso:', error);
+    }
+}
+
+async function salvarProgressoNoBanco() {
+    try {
+        const response = await fetch('http://localhost:3000/api/progresso', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                nome: jogador.nome,
+                capitulosConcluidos: jogador.capitulosConcluidos,
+                escolhas: jogador.escolhas
+            })
+        });
+
+        if (!response.ok) {
+            throw new Error('Erro ao salvar progresso no banco');
+        }
+
+        console.log('Progresso salvo com sucesso!');
+    } catch (error) {
+        console.error('Erro ao salvar progresso:', error);
+    }
+}
+
+async function iniciarJogo() {
     const inputNome = document.getElementById('nome-personagem').value;
     
     if (inputNome.trim() === "") {
@@ -71,6 +111,8 @@ function fazerEscolha(textoDecisao, foiSeguro, feedbackEducativo) {
 }
 
 function finalizarJogo() {
+    salvarProgressoNoBanco();
+
     const divResumo = document.getElementById('resumo-decisoes');
     divResumo.innerHTML = ""; 
     
@@ -194,7 +236,11 @@ app.post('/api/escolhas', (req, res) => {
 function atualizarProgresso(capitulo, escolhaCorreta) {
     console.log(`Capítulo: ${capitulo}, Escolha correta: ${escolhaCorreta}`);
 
+    progresso.nome = jogador.nome;
     progresso.capitulosConcluidos++;
+    if (escolhaCorreta) {
+        progresso.escolhasCorretas = (progresso.escolhasCorretas || 0) + 1;
+    }
     progresso.historicoEscolhas.push({
         capitulo: capitulo,
         escolhaCorreta: escolhaCorreta
@@ -207,6 +253,8 @@ function mostrarProgresso() {
     document.getElementById("perfil-nome").innerText = progresso.nome;
     document.querySelector("#tela-perfil-progresso p:nth-child(3)").innerText = 
         `Capítulos concluídos: ${progresso.capitulosConcluidos}`;
+    document.querySelector("#tela-perfil-progresso p:nth-child(3)").innerText = 
+        `Nota: ${progresso.escolhasCorretas} escolhas corretas`;
     document.querySelector("#tela-perfil-progresso p:nth-child(4)").innerText = 
         `Histórico de escolhas: ${progresso.historicoEscolhas.map(e => 
             `Capítulo ${e.capitulo}: ${e.escolhaCorreta ? "Correta" : "Errada"}`).join(", ")}`;
