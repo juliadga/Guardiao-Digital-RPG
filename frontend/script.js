@@ -29,24 +29,6 @@ let jogador = {
     escolhas: []
 };
 
-async function carregarProgressoDoBanco(nomeJogador) {
-    try {
-        const response = await fetch(`http://localhost:3000/api/progresso?nome=${nomeJogador}`);
-        if (!response.ok) {
-            throw new Error('Erro ao carregar progresso do banco');
-        }
-
-        const dados = await response.json();
-        jogador.nome = dados.nome;
-        jogador.capitulosConcluidos = dados.capitulosConcluidos;
-        jogador.escolhas = dados.escolhas;
-
-        console.log('Progresso carregado com sucesso:', jogador);
-    } catch (error) {
-        console.error('Erro ao carregar progresso:', error);
-    }
-}
-
 async function salvarProgressoNoBanco() {
     try {
         const response = await fetch('http://localhost:3000/api/progresso', {
@@ -66,6 +48,24 @@ async function salvarProgressoNoBanco() {
         console.log('Progresso salvo com sucesso!');
     } catch (error) {
         console.error('Erro ao salvar progresso:', error);
+    }
+}
+
+async function carregarProgressoDoBanco(nomeJogador) {
+    try {
+        const response = await fetch(`http://localhost:3000/api/progresso?nome=${nomeJogador}`);
+        if (!response.ok) {
+            throw new Error('Erro ao carregar progresso do banco');
+        }
+
+        const dados = await response.json();
+        jogador.nome = dados.nome;
+        jogador.capitulosConcluidos = dados.capitulosConcluidos;
+        jogador.escolhas = dados.escolhas;
+
+        console.log('Progresso carregado com sucesso:', jogador);
+    } catch (error) {
+        console.error('Erro ao carregar progresso:', error);
     }
 }
 
