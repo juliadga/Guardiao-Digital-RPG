@@ -57,3 +57,19 @@ input[type="text"] {
     background-color: #fff; 
     color: #333; 
 }
+
+#lista-capitulos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.coluna-capitulos {
+    display: flex;
+    flex-direction: column;
+}
+
+.capitulo-btn {
+    width: 250px;
+}
